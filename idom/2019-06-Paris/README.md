@@ -4,7 +4,7 @@
 
 A framework for controlling the web with Python
 
-<div alt="python:views/logo.py"/>
+<img src="https://raw.githubusercontent.com/rmorshea/talks/master/idom/2019-06-Paris/static/logo.png" alt="python:views/logo.py"/>
 
 <a href="https://github.com/rmorshea/idom">
   <i class="fas fa-code-branch"></i>
