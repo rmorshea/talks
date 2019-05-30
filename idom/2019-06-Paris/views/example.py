@@ -6,5 +6,5 @@ async def main(self, index=0):
     async def change():
         self.update(index + 1)
 
-    url = f"https://picsum.photos/800/300?image={index}"
+    url = f"https://picsum.photos/800/500?image={index}"
     return idom.node("img", src=url, eventHandlers=events, width="100%")
