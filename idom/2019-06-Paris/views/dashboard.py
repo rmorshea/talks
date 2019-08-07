@@ -1,6 +1,8 @@
 import time
 import asyncio
 import random
+import matplotlib
+matplotlib.use('Agg')
 from matplotlib import pyplot as plt
 
 
@@ -31,25 +33,21 @@ async def RandomWalk(self):
 
     style = idom.html.style("""
     .linked-inputs {margin-bottom: 20px}
-    .linked-inputs input {width: 48%;float: left; font-size: 20px; border: 1px solid grey}
+    .linked-inputs input {width: 48%;float: left}
     .linked-inputs input + input {margin-left: 4%}
-    fieldset {padding: 3px; padding-bottom: 6px;}
-    legend {background-color: #000; color: #fff; padding: 3px 6px; margin: 3px; font-size: 24px;}
     """)
 
-    return idom.html.div(style, plot, mu_inputs, sigma_inputs)
+    return idom.html.div(style, plot, mu_inputs, sigma_inputs, style={"width": "60%"})
 
 
-@idom.element
+@idom.element(run_in_executor=True)
 async def Plot(self, x, y):
-    fig, axes = plt.subplots(figsize=(8, 4))
+    fig, axes = plt.subplots()
     axes.plot(x, y)
     img = idom.Image("svg")
     fig.savefig(img.io, format="svg")
     plt.close(fig)
-    model = await img.render()
-    model["attributes"]["width"] = "100%"
-    return model
+    return img
 
 
 def linked_inputs(label, value, *types, **attributes):
@@ -60,7 +58,7 @@ def linked_inputs(label, value, *types, **attributes):
         inp = idom.Input(t, value, **attributes)
 
         @inp.events.on("change")
-        async def on_change(inp):
+        async def on_change(inp, event):
             for i in inputs:
                 i.update(inp.value)
             var.set(inp.value)

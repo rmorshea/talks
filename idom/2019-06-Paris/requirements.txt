@@ -1,2 +1,2 @@
-slidedown==0.4.2
+slidedown==0.2.2
 matplotlib

@@ -2,14 +2,15 @@
 
 # iDOM
 
-A framework for controlling the web with Python
-
-<div alt="python:views/logo.py"/>
-
-<a href="https://github.com/rmorshea/idom">
+- <a href="https://github.com/rmorshea/idom">
   <i class="fas fa-code-branch"></i>
   github.com/rmorshea/idom
 </a>
+
+- a framework for controlling the web with Python
+
+
+<div alt="python:views/logo.py"/>
 
 
 # About Me
@@ -54,14 +55,21 @@ A framework for controlling the web with Python
 
 - A set of Python and Javascript libraries.
 
-- A JSON protocol for server-side rendering HTML.
-
 - A Python dev tool to make interactive webpages.
 
-- An easy way for Javascript devs to empower them.
+- A JSON protocol for server-side rendering HTML.
+
+- An easy way to integrate existing JS libraries.
+
+- Not a Jupyter Widget
 
 
-# A Quick Example
+# A Simple Slideshow
+
+<img src="https://picsum.photos/800/300" border="7" alt="python:views/example.py"/>
+
+
+# The Slideshow Code
 
 ```python
 import idom
@@ -71,19 +79,17 @@ async def Slideshow(self, index=0):
     events = idom.Events()
 
     @events.on("click")
-    def change():
+    async def change():
         self.update(index + 1)
 
-    url = f"https://picsum.photos/800/300?image={index}"
-    return idom.node("img", src=url, eventHandlers=events)
+    return idom.html.img(
+      src=f"https://picsum.photos/800/300?image={index}",
+      style={"border": "7px solid grey"},
+      eventHandlers=events,
+    )
 
 idom.server.sanic.PerClientState(Slideshow).run("localhost", 8765)
 ```
-
-
-# The Result
-
-<div alt="python:views/example.py"/>
 
 
 # So How Does It Work?
@@ -98,7 +104,7 @@ idom.server.sanic.PerClientState(Slideshow).run("localhost", 8765)
 
 # Why?
 
-- Learning and keeping up Javascript is hard
+- Learning and keeping up with Javascript is hard
 - Python has very few libraries for creating GUIs
 
 ### Why Not Widgets?
@@ -110,12 +116,77 @@ idom.server.sanic.PerClientState(Slideshow).run("localhost", 8765)
 # What Can It Do?
 
 - Dashboards
-- Games (simple ones)
 - Websites
-- Desktop Apps
-- This slide deck!
+- Games (simple ones)
+- Desktop apps (Electron JS)
+- **This slide deck!**
 
 
 # A Simple Dashboard
 
-<div alt="python:views/dashboard.py"/>
+<img
+  src="https://github.com/rmorshea/talks/raw/master/idom/2019-06-Paris/static/dashboard.gif"
+  alt="python:views/dashboard.py"
+/>
+
+
+# Future Work
+
+- Ability to integrate existing 3rd party JS libraries
+- Create an Electron JS wrapper for iDOM
+- Include bindings for other backend servers
+- Improve test coverage and documentation
+- Finalize communication specification
+- Performance improvements (JSON compression)
+
+
+# End
+
+**These Slides**:
+<a href="https://github.com/rmorshea/talks/tree/master/idom/2019-06-Paris">
+  <i class="fas fa-file-powerpoint"></i>
+  github.com/rmorshea/talks
+</a>
+
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/rmorshea/idom">
+        <i class="fas fa-code-branch"></i>
+        github.com/rmorshea/idom
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://rmorshea.github.io">
+        <i class="fas fa-user"></i>
+        Ryan Morshead
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://twitter.com/rmorshea">
+        <i class="fab fa-twitter-square"></i>
+        twitter.com/rmorshea
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/rmorshea">
+        <i class="fab fa-github-square"></i>
+        github.com/rmorshea
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="mailto:ryan.morshead@gmail.com">
+        <i class="fas fa-envelope"></i>
+        ryan.morshead@gmail.com
+      </a>
+    </td>
+  </tr>
+</table>
