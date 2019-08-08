@@ -125,7 +125,7 @@ idom.server.sanic.PerClientState(Slideshow).run("localhost", 8765)
 # A Simple Dashboard
 
 <img
-  src="https://github.com/rmorshea/talks/raw/master/idom/2019-06-Paris/static/dashboard.gif"
+  src="https://github.com/rmorshea/talks/raw/master/idom/2019/static/dashboard.gif"
   alt="python:views/dashboard.py"
 />
 
