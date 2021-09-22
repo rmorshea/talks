@@ -1,12 +1,11 @@
-def main():
-    return awesomefont()
+import idom
 
 
-def awesomefont():
-    return idom.node(
-        "link",
-        rel="stylesheet",
-        href="https://use.fontawesome.com/releases/v5.8.2/css/all.css",
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay",
-        crossorigin="anonymous",
+def Main():
+    return idom.html.link(
+        {
+            "rel": "stylesheet",
+            "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css",
+            "crossorigin": "anonymous",
+        }
     )

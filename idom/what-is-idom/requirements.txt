@@ -1,2 +1,2 @@
-slidedown==0.2.2
-matplotlib
+slidedown==0.6.3
+black
