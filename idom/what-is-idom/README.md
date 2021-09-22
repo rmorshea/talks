@@ -5,6 +5,7 @@
 <!--
 
 - say name
+- IDOM stands for Interactive-DOM (Document Object Model)
 - social and slide links at the end
 - assumes some basic knowledge of:
   - HTML
@@ -16,6 +17,8 @@
 # Contents
 
 - Definitions
+- What is IDOM?
+
 
 
 # What is React <a href="https://reactjs.org/" target="_blank"><i class="fab fa-react" /></a>?
@@ -23,6 +26,17 @@
 - A Javascript library for building user interfaces
 - which uses "declarative" design patterns
 
+<!--
+
+refer to title of talk "it's React"
+
+ASK: "how many know React"
+ASK: "how many know what declarative means"
+
+no doubt many have heard, but also many probably haven't used
+we're going to briefly touch on React before going deeper
+
+-->
 
 # Declarative vs Imperative?
 
@@ -64,7 +78,7 @@ shows interactive click count button
 ```python
 def click_count_button():
     state = {"count": 0}
-    button = create_element("button")
+    button = Button()
 
     def increment_count():
         state["count"] += 1
@@ -88,11 +102,7 @@ def click_count_button():
     def increment_count():
         update_state({"count": count + 1})
 
-    return create_element(
-        "button",
-        {"on_click": increment_count},
-        f"clicked {count} times",
-    )
+    return Button({"on_click": increment_count}, f"clicked {count} times")
 ```
 
 
@@ -201,19 +211,22 @@ The main thing we took are components and hooks
 Instead of:
 
 ```python
+current_state: Callable[[], dict]
+update_state: Callable[[dict], None]
+
 def click_count_button():
-    state: dict = current_state()
+    state = current_state()
     count = state.get("count", 0)
 ```
 
-We'll write:
+With IDOM we would write:
 
 ```python
 import idom
 
 @idom.component
 def ClickCountButton():
-    count = idom.hooks.use_state(0)
+    count, set_count = idom.hooks.use_state(0)
 ```
 
 <!--
@@ -221,4 +234,24 @@ def ClickCountButton():
 - component: encapsulates the state of representation of a view
 - hook: allow you to "hook" into the life cycle and state of a component
 
+- use_state hook achieves the same effect
+- returns the current state with a callback to update it
+- also defines a default value
+
 -->
+
+
+# Reworked With IDOM
+
+```python
+import idom
+
+@idom.component
+def click_count_button():
+    count, set_count = idom.hooks.use_state(0)
+
+    def increment_count(event):
+        set_count(count + 1)
+
+    return idom.html.button({"onClick": increment_count}, f"clicked {count} times")
+```
