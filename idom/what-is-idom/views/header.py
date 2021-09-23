@@ -1,7 +1,7 @@
 import idom
 
 
-def Main():
+def main():
     return idom.html.link(
         {
             "rel": "stylesheet",

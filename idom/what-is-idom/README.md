@@ -1,4 +1,4 @@
-<span data-idom="views/header.py"/>
+<span data-idom="views.header"/>
 
 # <a href="https://github.com/idom-team/idom" target="_blank">IDOM</a> - it's React, but in Python
 
@@ -18,7 +18,8 @@
 
 - Definitions
 - What is IDOM?
-
+- Why IDOM?
+- How it Works
 
 
 # What is React <a href="https://reactjs.org/" target="_blank"><i class="fab fa-react" /></a>?
@@ -63,7 +64,7 @@ we're going to briefly touch on React before going deeper
 ---
 
 <div style="margin-left: 20%" >
-  <span data-idom="views/click_count.py" />
+  <span data-idom="views.click_count" />
 </div>
 
 <!--
@@ -231,7 +232,7 @@ def ClickCountButton():
 
 <!--
 
-- component: encapsulates the state of representation of a view
+- component: encapsulates the state and representation of a view
 - hook: allow you to "hook" into the life cycle and state of a component
 
 - use_state hook achieves the same effect
@@ -241,7 +242,22 @@ def ClickCountButton():
 -->
 
 
-# Reworked With IDOM
+# Declarative Psuedo Code
+
+
+```python
+def click_count_button():
+    state: dict = current_state()
+    count = state.get("count", 0)
+
+    def increment_count():
+        update_state({"count": count + 1})
+
+    return Button({"on_click": increment_count}, f"clicked {count} times")
+```
+
+
+# Code Written With IDOM
 
 ```python
 import idom
@@ -255,3 +271,93 @@ def click_count_button():
 
     return idom.html.button({"onClick": increment_count}, f"clicked {count} times")
 ```
+
+
+# Why IDOM?
+
+- Declarative
+- Empowers Python users
+- Simple Javascript bindings
+- Ecosystem independent
+
+<!--
+
+we got a sense for what it is
+
+now why should you use it.
+
+- declarative
+  - already covered but its an important point
+  - many peers rely on imperative design patterns
+
+GO TO NEXT SLIDE
+
+-->
+
+
+# Empowers Python Users
+
+<div style="margin-left: 25%">
+  <span data-idom="views.snake_game" />
+</div>
+
+<!--
+
+- IDOM doesn't limit Python users to high level abstractions
+  - You can control the DOM with nearly as much flexibility as a JS dev
+
+-->
+
+
+# Javascript "Just Works"
+
+<div style="margin-left: 30%">
+  <span data-idom="views.day_night_switch" />
+</div>
+
+```python
+import idom
+
+mui = idom.web.module_from_template("react", "@material-ui/core@^5.0", fallback="⌛")
+Switch = idom.web.export(mui, "Switch")
+
+@idom.component
+def DayNightSwitch():
+    state, set_state = idom.hooks.use_state(False)
+    return idom.html.div(
+        Switch({"checked": state, "onChange": lambda _, checked: set_state(checked)}),
+        "🌞" if state else "🌚",
+    )
+```
+
+<!--
+
+- When you do need to use Javascript it's easy
+  - When you're just experimenting, many things work "out of the box"
+  - When you it to be "production-grade" the bindings are simple
+  - It's so simple you can do it without build tooling!
+
+-->
+
+
+# Ecosystem Independence
+
+... show GIF of IDOM working in Jupyter
+
+<!--
+
+- IDOM's peers intentionally or by neccessity lock you into using one set of tools
+  - EX. Jupyter Widgets, Plotly, or Streamlit
+  - A widget written for one of these tools can't be ported elsewhere
+  - One written for IDOM can, in principle be taken anywhere
+  - Already supports Juyterpy and Plotly Dash
+
+-->
+
+
+# How Does it Work?
+
+
+# VDOM
+
+<span data-idom="views.img" data-file="idom-flow-diagram.svg" />

@@ -1,8 +1,11 @@
+from pathlib import Path
 import idom
 
 
-@idom.component
-def Main(file: str, style: str):
+PROJECT_DIR = Path(__file__).parent.parent
+
+
+def main(file: str, style: str = ""):
     style_dict = {}
     for style_part in map(str.strip, style.split(";")):
         if not style_part:
@@ -11,5 +14,11 @@ def Main(file: str, style: str):
         name = name.title().replace("-", "")
         name = name[0].lower() + name[1:]
         style_dict[name] = value
-    with open(f"static/{file}.png", "rb") as f:
-        return idom.widgets.image("png", f.read(), {"style": style_dict})
+
+    file_path = PROJECT_DIR / "static" / file
+
+    return idom.widgets.image(
+        file_path.suffix[1:],
+        file_path.read_text(),
+        {"style": style_dict},
+    )
