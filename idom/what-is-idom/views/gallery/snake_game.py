@@ -6,10 +6,6 @@ import time
 import idom
 
 
-def main():
-    return GameView(6, 70)
-
-
 class GameState(enum.Enum):
     lost = 1
     won = 2
@@ -17,20 +13,24 @@ class GameState(enum.Enum):
 
 
 @idom.component
-def GameView(grid_size, block_scale):
+def GameView():
     game_state, set_game_state = idom.hooks.use_state(GameState.play)
 
     if game_state == GameState.play:
-        return GameLoop(grid_size, block_scale, set_game_state=set_game_state)
+        return GameLoop(grid_size=6, block_scale=50, set_game_state=set_game_state)
 
     start_button = idom.html.button(
-        {"onClick": lambda event: set_game_state(GameState.play)},
+        {
+            "onClick": idom.event(
+                lambda event: set_game_state(GameState.play), stop_propagation=True
+            )
+        },
         "Start",
     )
 
     if game_state == GameState.won:
         menu = idom.html.div(idom.html.h3("You won!"), start_button)
-    elif game_state == GameState.lost:
+    else:
         menu = idom.html.div(idom.html.h3("You lost"), start_button)
 
     menu_style = idom.html.style(

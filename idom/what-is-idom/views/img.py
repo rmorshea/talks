@@ -19,6 +19,6 @@ def main(file: str, style: str = ""):
 
     return idom.widgets.image(
         file_path.suffix[1:],
-        file_path.read_text(),
+        file_path.read_bytes(),
         {"style": style_dict},
     )

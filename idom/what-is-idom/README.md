@@ -3,8 +3,7 @@
 # <a href="https://github.com/idom-team/idom" target="_blank">IDOM</a> - it's React, but in Python
 
 <!--
-
-- say name
+- not WS afiliated
 - IDOM stands for Interactive-DOM (Document Object Model)
 - social and slide links at the end
 - assumes some basic knowledge of:
@@ -61,9 +60,7 @@ we're going to briefly touch on React before going deeper
 
 # Give Me An Example
 
----
-
-<div style="margin-left: 20%" >
+<div style="margin-left:20%;margin-top:50px;" >
   <span data-idom="views.click_count" />
 </div>
 
@@ -155,8 +152,9 @@ def click_count_button():
     state = {"count": 0}
     button = create_element("button")
 
-    button.on_click = make_increment_callback(button)  # and here
-    button.children = ["clicked 0 times"]  # also here
+    button.on_click = make_increment_callback(button)
+    #                 ^ defined in another module
+    button.children = ["clicked 0 times"]
 
     return button
 ```
@@ -198,11 +196,13 @@ Well hopefully these bullets make sense now.
 -->
 
 
-# Inspired by React?
+# How Did React Inspire It?
 
 <!--
 
-The main thing we took are components and hooks
+The main thing we took where the
+- functional components
+- hooks
 
 -->
 
@@ -233,7 +233,7 @@ def ClickCountButton():
 <!--
 
 - component: encapsulates the state and representation of a view
-- hook: allow you to "hook" into the life cycle and state of a component
+- hook: allows you to "hook" into the life cycle and state of a component
 
 - use_state hook achieves the same effect
 - returns the current state with a callback to update it
@@ -263,7 +263,7 @@ def click_count_button():
 import idom
 
 @idom.component
-def click_count_button():
+def ClickCountButton():
     count, set_count = idom.hooks.use_state(0)
 
     def increment_count(event):
@@ -284,7 +284,15 @@ def click_count_button():
 
 we got a sense for what it is
 
-now why should you use it.
+now why should you use it - there are lots of alternatives out there
+
+most assume you have a JS team that can make custom components
+
+Streamlit: state management is restrictive
+IpyWidgets: imperative design patterns
+complicated JS bindings
+
+
 
 - declarative
   - already covered but its an important point
@@ -297,9 +305,7 @@ GO TO NEXT SLIDE
 
 # Empowers Python Users
 
-<div style="margin-left: 25%">
-  <span data-idom="views.snake_game" />
-</div>
+<span data-idom="views.gallery" />
 
 <!--
 
@@ -310,10 +316,6 @@ GO TO NEXT SLIDE
 
 
 # Javascript "Just Works"
-
-<div style="margin-left: 30%">
-  <span data-idom="views.day_night_switch" />
-</div>
 
 ```python
 import idom
@@ -330,6 +332,11 @@ def DayNightSwitch():
     )
 ```
 
+<div style="margin-left: 30%">
+  <span data-idom="views.day_night_switch" />
+</div>
+
+
 <!--
 
 - When you do need to use Javascript it's easy
@@ -342,7 +349,7 @@ def DayNightSwitch():
 
 # Ecosystem Independence
 
-... show GIF of IDOM working in Jupyter
+<span data-idom="views.img" data-file="idom-in-jupyter.gif" />
 
 <!--
 

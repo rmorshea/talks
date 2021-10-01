@@ -9,6 +9,11 @@ Switch = idom.web.export(mui, "Switch")
 def Main():
     state, set_state = idom.hooks.use_state(False)
     return idom.html.div(
-        Switch({"checked": state, "onChange": lambda _, checked: set_state(checked)}),
+        idom.html.div(
+            {"style": {"display": "inline-block"}},
+            Switch(
+                {"checked": state, "onChange": lambda _, checked: set_state(checked)}
+            ),
+        ),
         "🌞" if state else "🌚",
     )
