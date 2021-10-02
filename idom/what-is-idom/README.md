@@ -141,13 +141,14 @@ fall prey to the same problems that plague imperative UI JS frameworks like Angu
 
 <!--
 
-IDOM is a powerful UI framework inspired by React
+IDOM is a powerful UI framework
 
 -->
 
-# Inspired By React
+# It's Declarative
 
 
+# With React
 
 ```jsx
 import React, { useState } from "react";
@@ -163,6 +164,9 @@ function Counter() {
 ReactDOM.render(<Counter />, document.getElementById("root"));
 ```
 
+
+# With IDOM
+
 ```python
 import idom
 
@@ -176,3 +180,53 @@ def Counter():
 
 idom.run(Counter)
 ```
+
+---
+
+<div style="display:flex;justify-content:center;">
+  <span data-idom="views.click_count" />
+</div>
+
+
+# Javascript "Just Works"
+
+```python
+import idom
+
+victory = idom.web.module_from_template("react", "victory-bar", fallback="⌛")
+VictoryBar = idom.web.export(victory, "VictoryBar")
+
+@idom.component
+def MyBarChart():
+    bar_style = {"parent": {"width": "500px"}, "data": {"fill": "royalblue"}}
+    return VictoryBar({"style": bar_style})
+```
+
+<div style="display:flex;justify-content:center;">
+  <span data-idom="views.victory_chart" />
+</div>
+
+
+<!--
+
+- When you do need to use Javascript it's easy
+  - When you're just experimenting, many things work "out of the box"
+  - When you it to be "production-grade" the bindings are simple
+  - It's so simple you can do it without build tooling!
+
+-->
+
+
+# Ecosystem Independence
+
+<span data-idom="views.img" data-file="idom-in-jupyter.gif" />
+
+<!--
+
+- IDOM's peers intentionally or by neccessity lock you into using one set of tools
+  - EX. Jupyter Widgets, Plotly, or Streamlit
+  - A widget written for one of these tools can't be ported elsewhere
+  - One written for IDOM can, in principle be taken anywhere
+  - Already supports Juyterpy and Plotly Dash
+
+-->
