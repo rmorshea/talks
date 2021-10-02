@@ -6,19 +6,19 @@
 - not WS afiliated
 - IDOM stands for Interactive-DOM (Document Object Model)
 - social and slide links at the end
-- assumes some basic knowledge of:
-  - HTML
-  - web apps
 
 -->
 
+# A Bit of History
 
-# Contents
+Go through a bit of history
 
-- Definitions
-- What is IDOM?
-- Why IDOM?
-- How it Works
+# IPython Notebook
+
+
+
+# ~2010
+
 
 
 # What is React <a href="https://reactjs.org/" target="_blank"><i class="fab fa-react" /></a>?
