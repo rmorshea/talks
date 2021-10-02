@@ -30,7 +30,7 @@ Did so in the form of the IPython Notebook, now Jupyter
 
 # IPyWidgets
 
-<img src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/notebook-contributors.png" />
+<img src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/ipywidgets-contributors.png" />
 
 
 # What is React <a href="https://reactjs.org/" target="_blank"><i class="fab fa-react" /></a>?
