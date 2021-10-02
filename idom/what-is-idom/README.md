@@ -11,14 +11,26 @@
 
 # A Bit of History
 
-Go through a bit of history
 
 # IPython Notebook
 
+<img src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/ipython-notebook.png" />
 
+<!--
 
-# ~2010
+~2010-2012
 
+The browser was becoming the OS of the internet.
+
+Python, being a backend language had to adapt.
+
+Did so in the form of the IPython Notebook, now Jupyter
+
+-->
+
+# IPyWidgets
+
+<img src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/notebook-contributors.png" />
 
 
 # What is React <a href="https://reactjs.org/" target="_blank"><i class="fab fa-react" /></a>?
