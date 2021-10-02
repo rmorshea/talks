@@ -30,7 +30,7 @@ Did so in the form of the IPython Notebook, now Jupyter
 
 # IPyWidgets
 
-<img src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/ipywidgets-contributors.png" />
+<img src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/ipywidgets-interaction.gif" />
 
 <!--
 
@@ -38,9 +38,21 @@ as part of this project to bring Python to the browser
 
 IPyWidgets was created.
 
-Allowed Python to interact with the DOM through Notebook APIs
+Allowed Python to have bidirectional comms with DOM and Javascript
 
- -->
+used Notebook APIs
+
+This helped to spur
+
+-->
+
+
+# Javascript
+
+
+# Declarative Frameworks
+
+<img src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/js-shift-to-declarative.png" />
 
 
 # What is React <a href="https://reactjs.org/" target="_blank"><i class="fab fa-react" /></a>?
