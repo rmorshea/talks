@@ -14,7 +14,7 @@
 
 # IPython Notebook
 
-<img src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/ipython-notebook.png" />
+<img src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/ipython-notebook.png" style="height:550px" />
 
 <!--
 
@@ -31,6 +31,16 @@ Did so in the form of the IPython Notebook, now Jupyter
 # IPyWidgets
 
 <img src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/ipywidgets-contributors.png" />
+
+<!--
+
+as part of this project to bring Python to the browser
+
+IPyWidgets was created.
+
+Allowed Python to interact with the DOM through Notebook APIs
+
+ -->
 
 
 # What is React <a href="https://reactjs.org/" target="_blank"><i class="fab fa-react" /></a>?
