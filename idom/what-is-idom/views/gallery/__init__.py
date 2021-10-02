@@ -22,4 +22,5 @@ def main():
         MapWithMarkers(),
         line_break(),
         PolynomialPlot(),
+        line_break(),
     )
