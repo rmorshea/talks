@@ -211,6 +211,7 @@ In short, you as the developer have very fine grained control
 - Only responsible for app states
 - Transitions are handled for you
 
+
 # Is Declarative Better?
 
 <!--
@@ -250,6 +251,9 @@ Have they learned the same lesson?
 Declarative programs tends to be
 easier to do correctly
 
+
+It's been a while since IPyWidgets
+
 unfortunately, no
 not really
 
@@ -281,11 +285,10 @@ but doesn't fully embrace it
 
 <!--
 
-enter IDOM
+That's where IDOM comes in
 
 unlike peers
-IDOM takes heavy inspiration from React
-specifically
+IDOM takes heavy inspiration from the React UI Framework
 
 thus has many of the same declarative virtues
 
@@ -324,6 +327,9 @@ MATPLOTLIB!
 
 <!--
 
+want to
+take a moment
+
 To emphasize the inspriation from React
 
 look at example
@@ -341,18 +347,27 @@ look at example
 
 # With React
 
+<!--
+
+This is Javascript (JSX specifically)
+so the syntax looks weird
+
+just note a few things
+
+-->
+
 ```jsx
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-function Counter() {
+function ClickCounter() {
     const [count, setCount] = useState(0);
     return <button onClick={() => setCount(count + 1)}>
         clicked {count} times
     </button>;
 }
 
-ReactDOM.render(<Counter />, document.getElementById("root"));
+ReactDOM.render(<ClickCounter />, document.getElementById("root"));
 ```
 
 
@@ -362,7 +377,7 @@ ReactDOM.render(<Counter />, document.getElementById("root"));
 import idom
 
 @idom.component
-def Counter():
+def ClickCounter():
     count, set_count = idom.hooks.use_state(0)
     return idom.html.button(
         {"onClick": lambda _: set_count(count + 1)},
@@ -376,13 +391,17 @@ idom.run(Counter)
 
 <!--
 
+A cool side effect
+of similarity
+
 When you learn how to write a app with IDOM
 
 while not exactly the same
 
 If you choose to learn Javascript
 much of what you learned with IDOM
-can be directly applied to writing them in React
+can be directly applied
+writing apps with React in JS
 
  -->
 
