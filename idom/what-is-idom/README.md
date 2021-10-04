@@ -9,7 +9,7 @@
 <!--
 - not WS afiliated
 - IDOM stands for Interactive-DOM (Document Object Model)
-- bringing declarative philosphy of react to Python
+- bringing the declarative philosphy of react to Python
 - social and slide links at the end
 
 -->
@@ -29,7 +29,11 @@ The browser was becoming the OS of the internet.
 
 Python, being a backend language had to adapt.
 
-Did so in the form of the IPython Notebook, now Jupyter
+To my mind
+
+That happened first and foremost
+
+with the IPython Notebook, now Jupyter
 
 -->
 
@@ -52,6 +56,8 @@ used Notebook APIs
 
 This helped to spur Python's popularity amongst scientists
 
+make interactive tools for non-engineers
+
 -->
 
 
@@ -71,35 +77,63 @@ Old imperative frameworks like Angular quickly went out of fashion
 While there are many fads in the JS world declarative frameworks
 and React specifically seem to have staying power.
 
-Why though?
+to understand why
+need to talk about what it means
+to be imperative vs declarative
 
 -->
 
 
 # Declarative vs Imperative?
 
-- [imperative](https://en.wikipedia.org/wiki/Imperative_programming) - uses statements that change a program's state.
-- [declarative](https://en.wikipedia.org/wiki/Declarative_programming) - expresses the logic of a computation without describing its control flow.
+<!--
+
+high level
+
+these are two different programming paradigms
+depending on context
+whether working in declarative vs imperative is
+- stylistic choice
+- or enforced by a framework or programming language
+
+what is difference?
+
+-->
+
+# Imperative
 
 <!--
 
-- according to wikipedia...
+if talking about web apps
 
-- means that:
-  - describe state of app at each step
+- imperative
+  - define states the app evolves through
+  - and details of how it transitions between those states
+-->
+
+# Declarative
+
+<!--
+
+- declarative:
+  - still responsible describe state of app at each step
   - the programming framework handles transitions
 
 Why is that better?
 
 one less thing for programmer to worry about
 
+important to state
+there's a lot more to this topic
+
+declarative is not always better
+visa versa
+
+but for the purposes of this talk that's all you need to know
+
 -->
 
-
-# Circling Back
-
-
-# <div style="display:flex;justify-content:center;"><div>Python UI Frameworks</div></div>
+# <div style="display:flex;justify-content:center;"><div>What About Python UI Frameworks?</div></div>
 
 ---
 
@@ -116,17 +150,42 @@ one less thing for programmer to worry about
 
 <!--
 
-Bokeh
-Panel
-IPyWidgets
-Streamlit
+after IPyWidgets?
 
-fall prey to the same problems that plague imperative UI JS frameworks like Angular
+unfortunately
+have not adopt the lessons that were learned by Javascript frameworks like React
+that made them popular and easy to use
 
- -->
+that is, many fall prey to the problems of imperative design patterns in one form or another
+
+-->
 
 
 #
+
+<!--
+
+enter IDOM
+
+IDOM takes heavy inspiration from React
+specifically
+
+thus has many of the same declarative virtues
+
+Beyond that though
+IDOM as UI framework for Python is unusually powerful
+
+because
+
+puts nearly all the same capabilities of the React framework into the hands
+of Python developers
+
+SCROLL DOWN!
+
+But it also doesn't give up the things that are great about Python
+MATPLOTLIB!
+
+ -->
 
 <div style="height:25vh" />
 
@@ -139,13 +198,23 @@ fall prey to the same problems that plague imperative UI JS frameworks like Angu
 <span data-idom="views.gallery" />
 
 
+# Inspired By React
+
 <!--
 
-IDOM is a powerful UI framework
+To emphasize the inspriation from React
 
--->
+look at example
 
-# It's Declarative
+ -->
+
+# Simple Click Counter
+
+---
+
+<div style="display:flex;justify-content:center;margin-top:50px;">
+  <span data-idom="views.click_count" />
+</div>
 
 
 # With React
@@ -181,11 +250,22 @@ def Counter():
 idom.run(Counter)
 ```
 
----
+# Transferable Knowledge
 
-<div style="display:flex;justify-content:center;">
-  <span data-idom="views.click_count" />
-</div>
+<!--
+
+When you learn how to write a app with IDOM
+
+while not exactly the same
+
+If you choose to learn Javascript
+much of what you learned with IDOM
+can be directly applied to writing them in React
+
+ -->
+
+
+# But Wait... There's More!
 
 
 # Javascript "Just Works"
@@ -209,10 +289,14 @@ def MyBarChart():
 
 <!--
 
-- When you do need to use Javascript it's easy
-  - When you're just experimenting, many things work "out of the box"
-  - When you it to be "production-grade" the bindings are simple
-  - It's so simple you can do it without build tooling!
+When you do need to use Javascript it's easy
+
+Because IDOM is still running Python in the backened
+e.g. Matplotlib ex
+
+So long as library you want is React
+
+Just export the component you want and use it
 
 -->
 
