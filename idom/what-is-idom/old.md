@@ -1,4 +1,52 @@
 
+# Simple Javascript Bindings
+
+```python
+import idom
+
+victory = idom.web.module_from_template("react", "victory-bar", fallback="⌛")
+VictoryBar = idom.web.export(victory, "VictoryBar")
+
+@idom.component
+def MyBarChart():
+    bar_style = {"parent": {"width": "500px"}, "data": {"fill": "royalblue"}}
+    return VictoryBar({"style": bar_style})
+```
+
+<div style="display:flex;justify-content:center;">
+  <span data-idom="views.victory_chart" />
+</div>
+
+
+<!--
+
+When you do need to use Javascript it's easy
+
+Because IDOM is still running Python in the backened
+e.g. Matplotlib ex
+
+So long as library you want is React
+
+Just export the component you want and use it
+
+-->
+
+
+# Ecosystem Independence
+
+<span data-idom="views.img" data-file="idom-in-jupyter.gif" />
+
+<!--
+
+- IDOM's peers intentionally or by neccessity lock you into using one set of tools
+  - EX. Jupyter Widgets, Plotly, or Streamlit
+  - A widget written for one of these tools can't be ported elsewhere
+  - One written for IDOM can, in principle be taken anywhere
+  - Already supports Juyterpy and Plotly Dash
+
+-->
+
+
 
 
 

@@ -8,7 +8,7 @@ from .snake_game import GameView
 
 
 def line_break():
-    return idom.html.hr({"style": {"margin": "60px 0"}})
+    return idom.html.hr({"style": {"margin": "70px 0"}})
 
 
 def main():
@@ -22,5 +22,4 @@ def main():
         MapWithMarkers(),
         line_break(),
         PolynomialPlot(),
-        line_break(),
     )

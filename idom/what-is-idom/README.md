@@ -27,6 +27,7 @@ full disclosure I'm also creator of IDOM
 - A bit of history
 - Where IDOM fits in
 - What you can do with IDOM
+- Why IDOM is unique
 - How IDOM works
 
 
@@ -288,6 +289,8 @@ but doesn't fully embrace it
 
 #
 
+<img src="https://raw.githubusercontent.com/idom-team/idom/main/branding/svg/idom-logo.svg" />
+
 <!--
 
 That's where IDOM comes in
@@ -310,36 +313,11 @@ and having near parity
 with features of a JS Framework
 is pretty unheard of
 
-SCROLL DOWN!
-
-But it also doesn't give up the things that are great about Python
-MATPLOTLIB!
-
- -->
-
-<div style="height:25vh" />
-
-<img src="https://raw.githubusercontent.com/idom-team/idom/main/branding/svg/idom-logo.svg" />
-
-<div style="height:50vh" />
-
----
-
-<span data-idom="views.gallery" />
-
-
-# Inspired By React
-
-<!--
-
-want to
-take a moment
-
-To emphasize the inspriation from React
-
+to demonstrate
 look at example
 
- -->
+-->
+
 
 # Simple Click Counter
 
@@ -411,52 +389,73 @@ writing apps with React in JS
  -->
 
 
-# But Wait... There's More!
+#
+
+<div style="height:45vh" />
+
+<div>
+<h1>What Can IDOM Do?</h1>
+</div>
+
+<div style="height:50vh" />
+
+<!--
+
+SCROLL DOWN!
+
+But it also doesn't give up the things that are great about Python
+MATPLOTLIB!
+
+ -->
+
+<span data-idom="views.gallery" />
+
+<div style="height:25vh" />
 
 
-# Javascript "Just Works"
+# How Does It Work?
 
-```python
-import idom
 
-victory = idom.web.module_from_template("react", "victory-bar", fallback="⌛")
-VictoryBar = idom.web.export(victory, "VictoryBar")
+#
 
-@idom.component
-def MyBarChart():
-    bar_style = {"parent": {"width": "500px"}, "data": {"fill": "royalblue"}}
-    return VictoryBar({"style": bar_style})
-```
+<!--
 
-<div style="display:flex;justify-content:center;">
-  <span data-idom="views.victory_chart" />
+virtual document object model
+
+a.k.a. Virtual DOM
+
+what is the DOM?
+
+standardized data structure
+which "models"
+a "document"
+as a series of nodes or "objects"
+arranged in form of a tree
+
+see image
+
+-->
+
+<div style="display:flex;justify-content:center">
+  <h1 style="font-size:3vw;width:40%;margin-right:50px;border-right:solid 7px grey;">
+    Virtual Document Object Model
+  </h1>
+  <img
+    style="width:50%"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1280px-DOM-model.svg.png"
+  />
 </div>
 
 
-<!--
+# IDOM's Architecture
 
-When you do need to use Javascript it's easy
-
-Because IDOM is still running Python in the backened
-e.g. Matplotlib ex
-
-So long as library you want is React
-
-Just export the component you want and use it
-
--->
+<div style="display:flex;justify-content:center;">
+  <span data-idom="views.img" data-file="idom-flow-diagram.svg" />
+</div>
 
 
-# Ecosystem Independence
+# MVC Architecture
 
-<span data-idom="views.img" data-file="idom-in-jupyter.gif" />
-
-<!--
-
-- IDOM's peers intentionally or by neccessity lock you into using one set of tools
-  - EX. Jupyter Widgets, Plotly, or Streamlit
-  - A widget written for one of these tools can't be ported elsewhere
-  - One written for IDOM can, in principle be taken anywhere
-  - Already supports Juyterpy and Plotly Dash
-
--->
+<div style="display:flex;justify-content:center;">
+  <span data-idom="views.img" data-file="mvc-flow-diagram.svg" />
+</div>
