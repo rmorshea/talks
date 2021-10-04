@@ -55,6 +55,9 @@ that's what we're gonna focus on
 
 <!--
 
+Start with IPython Notebook
+
+came about around
 ~2010-2012
 
 The browser was becoming the OS of the internet.
@@ -125,7 +128,7 @@ part of the point
 I don't want you need to know about
 Javascript or React
 
-moving on
+getting back to it
 
 -->
 
@@ -164,7 +167,7 @@ need to talk about those two terms
 -->
 
 
-# Declarative vs Imperative?
+# Imperative vs Declarative?
 
 <!--
 
@@ -223,6 +226,8 @@ may have noticed
 in declarative
 
 one less thing for programmer to worry about
+that being
+details those transtions between states
 of course
 at the cost of control
 
