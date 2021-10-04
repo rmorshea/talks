@@ -7,14 +7,35 @@
 ### It's React, but in Python
 
 <!--
-- not WS afiliated
-- IDOM stands for Interactive-DOM (Document Object Model)
-- bringing the declarative philosphy of react to Python
-- social and slide links at the end
+
+presenting on IDOM
+
+new UI Framework for Python
+best compared to
+
+Plotly Dash
+
+Streamlit
+
+full disclosure I'm also creator of IDOM
 
 -->
 
-# A Bit of History
+# The Plan
+
+- A bit of history
+- Where IDOM fits in
+- What you can do with it
+- How it works
+
+
+# UI Frameworks
+
+---
+
+### a *very* brief history...
+
+#### ...as it relates to Python
 
 
 # IPython Notebook
@@ -46,22 +67,41 @@ with the IPython Notebook, now Jupyter
 
 ~2012-2014
 
-as part of this project to bring Python to the browser
+leveraged IPython Notebook APIs
 
-IPyWidgets was created.
+to give Python bidirectional comms with Browser
 
-Allowed Python to have bidirectional comms with DOM and Javascript
-
-used Notebook APIs
+thus, interactivity (e.x.)
 
 This helped to spur Python's popularity amongst scientists
 
-make interactive tools for non-engineers
+creation of...
+interactive
+computing tools
+for non-engineers
 
 -->
 
 
-# Javascript Frameworks
+# Javascript UI Frameworks
+
+
+<!--
+
+This is where the "React"
+from the title
+comes into the picture
+
+How many of you guys have heard of React?
+
+if you're unfamiliar don't wory.
+part of the point
+you shouldn't have to know
+Javascript or React
+
+moving on
+
+-->
 
 
 # A Paradigm Shift
@@ -70,12 +110,24 @@ make interactive tools for non-engineers
 
 <!--
 
-2015-2017 new declarative Javascript frameworks gained popularity
+a little later
+2015-2017
 
-Old imperative frameworks like Angular quickly went out of fashion
+paradigm shift
+within world of Javascript UI Framework
 
-While there are many fads in the JS world declarative frameworks
-and React specifically seem to have staying power.
+new declarative frameworks
+like React and Vue
+gained popularity
+
+over old imperative ones
+like Angular
+which had been extremely popular prior
+
+While there are many fads in the JS world
+declarative frameworks
+and React specifically
+seem to have staying power.
 
 to understand why
 need to talk about what it means
@@ -154,9 +206,10 @@ after IPyWidgets?
 
 unfortunately
 have not adopt the lessons that were learned by Javascript frameworks like React
-that made them popular and easy to use
+that make them popular and easy to use
 
-that is, many fall prey to the problems of imperative design patterns in one form or another
+that is, many Python UI Frameworks fall prey to the problems of imperative design
+patterns in one form or another
 
 -->
 
