@@ -14,8 +14,9 @@ new UI Framework for Python
 best compared to
 
 Plotly Dash
-
 Streamlit
+IPyWidgets
+others...
 
 full disclosure I'm also creator of IDOM
 
@@ -25,8 +26,8 @@ full disclosure I'm also creator of IDOM
 
 - A bit of history
 - Where IDOM fits in
-- What you can do with it
-- How it works
+- What you can do with IDOM
+- How IDOM works
 
 
 # UI Frameworks
@@ -36,6 +37,16 @@ full disclosure I'm also creator of IDOM
 ### a *very* brief history...
 
 #### ...as it relates to Python
+
+<!--
+
+A history of what?
+
+given that IDOM is a UI framework
+
+that's what we're gonna focus on
+
+ -->
 
 
 # IPython Notebook
@@ -52,9 +63,15 @@ Python, being a backend language had to adapt.
 
 To my mind
 
-That happened first and foremost
+IPython Notebook was a leader in that area
 
-with the IPython Notebook, now Jupyter
+and remains so today
+
+in the form of
+Jupyter Lab
+and the "Jovian" ecosystem
+
+part of the reason for that is...
 
 -->
 
@@ -65,20 +82,29 @@ with the IPython Notebook, now Jupyter
 
 <!--
 
+related project
+
 ~2012-2014
 
 leveraged IPython Notebook APIs
 
 to give Python bidirectional comms with Browser
 
-thus, interactivity (e.x.)
+thus, brought interactivity to Python
+
+see example
 
 This helped to spur Python's popularity amongst scientists
 
-creation of...
+allowed for creation of
 interactive
 computing tools
 for non-engineers
+
+scientists no longer had to make User Interfaces themselves
+in order to make their work more approachable
+
+shifting gears...
 
 -->
 
@@ -96,7 +122,7 @@ How many of you guys have heard of React?
 
 if you're unfamiliar don't wory.
 part of the point
-you shouldn't have to know
+I don't want you need to know about
 Javascript or React
 
 moving on
@@ -129,9 +155,11 @@ declarative frameworks
 and React specifically
 seem to have staying power.
 
+based on the graph
+not going anywhere anytime soon
+
 to understand why
-need to talk about what it means
-to be imperative vs declarative
+need to talk about those two terms
 
 -->
 
@@ -141,12 +169,16 @@ to be imperative vs declarative
 <!--
 
 high level
+these terms
+describe two programming paradigms
 
-these are two different programming paradigms
 depending on context
-whether working in declarative vs imperative is
-- stylistic choice
-- or enforced by a framework or programming language
+what paradigm you're programming in
+
+stylistic choice
+one you might not even be aware you're making
+
+or enforced by a framework or programming language
 
 what is difference?
 
@@ -156,36 +188,81 @@ what is difference?
 
 <!--
 
-if talking about web apps
+what it means
+to operate in imperative
+with respect to making web applications
 
-- imperative
-  - define states the app evolves through
-  - and details of how it transitions between those states
+you as developer
+are responsible for
+
+-->
+
+- Define state app evolves through
+- and how it transitions
+
+<!--
+
+In short, you as the developer have very fine grained control
+
 -->
 
 # Declarative
 
+- Only responsible for app states
+- Transitions are handled for you
+
+# Is Declarative Better?
+
 <!--
 
-- declarative:
-  - still responsible describe state of app at each step
-  - the programming framework handles transitions
+So why are declarative JS frameworks
+gaining market share?
 
-Why is that better?
+may have noticed
+in declarative
 
 one less thing for programmer to worry about
+of course
+at the cost of control
+
+but many times we don't want that burden
+bugs
+extra work
+
+---
+
+before moving on
 
 important to state
 there's a lot more to this topic
-
-declarative is not always better
-visa versa
 
 but for the purposes of this talk that's all you need to know
 
 -->
 
 # <div style="display:flex;justify-content:center;"><div>What About Python UI Frameworks?</div></div>
+
+<!--
+
+What About Python UI Frameworks?
+Have they learned the same lesson?
+
+Declarative programs tends to be
+easier to do correctly
+
+unfortunately, no
+not really
+
+almost all
+one form or another
+fall prey problems of
+imperative design patterns
+
+there's been some movement in a possitive direction
+Streamlit has done best
+but doesn't fully embrace it
+
+-->
 
 ---
 
@@ -195,24 +272,10 @@ but for the purposes of this talk that's all you need to know
     <img style="width:35%;margin:7%" src="https://panel.holoviz.org/_static/logo_stacked.png" />
   </div>
   <div style="display:flex;justify-content:center;">
-    <img style="width:35%;margin:7%" src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/ipy-logo.png" />
+    <img style="width:35%;margin:7%" src="https://avatars.githubusercontent.com/u/5997976?s=200&v=4" />
     <img style="width:35%;margin:7%" src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.svg" />
   </div>
 </div>
-
-<!--
-
-after IPyWidgets?
-
-unfortunately
-have not adopt the lessons that were learned by Javascript frameworks like React
-that make them popular and easy to use
-
-that is, many Python UI Frameworks fall prey to the problems of imperative design
-patterns in one form or another
-
--->
-
 
 #
 
@@ -220,6 +283,7 @@ patterns in one form or another
 
 enter IDOM
 
+unlike peers
 IDOM takes heavy inspiration from React
 specifically
 
@@ -230,8 +294,13 @@ IDOM as UI framework for Python is unusually powerful
 
 because
 
-puts nearly all the same capabilities of the React framework into the hands
-of Python developers
+puts nearly all the same capabilities of the React
+into the hands of Python developers
+
+which, mind you, React is a JS Framework
+and having near parity
+with features of a JS Framework
+is pretty unheard of
 
 SCROLL DOWN!
 

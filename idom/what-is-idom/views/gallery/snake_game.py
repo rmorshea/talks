@@ -20,11 +20,7 @@ def GameView():
         return GameLoop(grid_size=6, block_scale=50, set_game_state=set_game_state)
 
     start_button = idom.html.button(
-        {
-            "onClick": idom.event(
-                lambda event: set_game_state(GameState.play), stop_propagation=True
-            )
-        },
+        {"onClick": lambda event: set_game_state(GameState.play)},
         "Start",
     )
 
