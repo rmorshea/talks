@@ -247,6 +247,10 @@ but for the purposes of this talk that's all you need to know
 
 -->
 
+
+# Wisdom of the Croud
+
+
 # <div style="display:flex;justify-content:center;"><div>What About Python UI Frameworks?</div></div>
 
 <!--
@@ -350,7 +354,10 @@ function ClickCounter() {
     </button>;
 }
 
-ReactDOM.render(<ClickCounter />, document.getElementById("root"));
+ReactDOM.render(
+  <ClickCounter />,
+  document.getElementById("root"),
+);
 ```
 
 
@@ -447,6 +454,69 @@ see image
 </div>
 
 
+# Some HTML
+
+```html
+<div>
+  Put your name here:
+  <input
+    type="text"
+    minlength="4"
+    maxlength="8"
+    onchange="a_python_callback(event)"
+  />
+</div>
+```
+
+# Turned Into VDOM
+
+```python
+{
+  "tagName": "div",
+  "children": [
+    "Put your name here:",
+    {
+      "tagName": "input",
+      "attributes": {
+        "type": "text",
+        "minLength": 4,
+        "maxLength": 8
+      },
+      "eventHandlers": {
+        "onChange": {
+          "target": "unique-id-of-a_python_callback",
+          "preventDefault": False,
+          "stopPropagation": False
+        }
+      }
+    }
+  ],
+}
+```
+
+# Create VDOM With IDOM
+
+```python
+html.div(
+  "Put your name here:",
+  html.input(
+    {
+        "type": "text",
+        "minLength": 4,
+        "maxLength": 8,
+        "onChange": lambda event: ...
+    }
+  )
+)
+```
+
+# MVC Architecture
+
+<div style="display:flex;justify-content:center;">
+  <span data-idom="views.img" data-file="mvc-flow-diagram.svg" />
+</div>
+
+
 # IDOM's Architecture
 
 <div style="display:flex;justify-content:center;">
@@ -454,8 +524,38 @@ see image
 </div>
 
 
-# MVC Architecture
+#
+
+> **Isn’t wiring a virtual representation of the view to the client,
+> even if its diffed, expensive?**
+
+
+# Javascript Integration
+
+```python
+import idom
+
+victory = idom.web.module_from_template(
+  "react", "victory-bar", fallback="⌛"
+)
+VictoryBar = idom.web.export(victory, "VictoryBar")
+
+@idom.component
+def MyBarChart():
+    bar_style = {
+        "parent": {"width": "500px"},
+        "data": {"fill": "royalblue"},
+    }
+    return VictoryBar({"style": bar_style})
+```
 
 <div style="display:flex;justify-content:center;">
-  <span data-idom="views.img" data-file="mvc-flow-diagram.svg" />
+  <span data-idom="views.victory_chart" />
 </div>
+
+
+<!--
+
+
+
+-->
