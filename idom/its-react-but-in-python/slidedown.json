@@ -1,3 +1,0 @@
-{
-    "reload_watch": ["static/*", "views/**/*.py"]
-}

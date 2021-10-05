@@ -1,4 +1,0 @@
-slidedown==0.6.3
-black
-matplotlib
-jsx-lexer

@@ -1,1 +1,0 @@
--r idom/its-react-but-in-python/requirements.txt
