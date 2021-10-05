@@ -1,4 +1,7 @@
-slidedown==0.6.3
+slidedown==0.7.0
 black
 matplotlib
 jsx-lexer
+
+idom
+idom-jupyter
