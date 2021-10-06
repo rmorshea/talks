@@ -6,3 +6,4 @@ jsx-lexer
 idom
 idom-jupyter
 jupyterlab
+retrolab

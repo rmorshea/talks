@@ -33,3 +33,20 @@ write down the list make sure talk does it
   - it's declarative because it copies React
 - It's easy to make stuff with IDOM
   - show toy app to explain that
+
+
+----
+
+
+state the understanding the details of VDOM
+not important
+
+better explain VDOM is an intermediate
+
+rephrase JS integration from object to just statement
+
+for demo
+
+- ask for people following along
+- most people in-person will not
+- use as opportunity to mention "ecosystem independence"

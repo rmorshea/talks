@@ -8,7 +8,7 @@
 
 <!--
 
-presenting on IDOM
+talking about IDOM
 
 new UI Framework for Python
 best compared to
@@ -27,32 +27,34 @@ full disclosure I'm also creator of IDOM
 - A bit of history
 - Where IDOM fits in
 - What you can do with IDOM
-- Why IDOM is unique
 - How IDOM works
+- Live demo
 
 
-# UI Frameworks
+#
+
+<div>
+  <h1>A Brief History</h1>
+  <h1>of UI Frameworks</h1>
+</div>
 
 ---
 
-### a *very* brief history...
-
-#### ...as it relates to Python
+### ...as it relates to Python
 
 <!--
 
 A history of what?
 
-given that IDOM is a UI framework
-
-that's what we're gonna focus on
+since that's what
+aims to be
 
  -->
 
 
 # IPython Notebook
 
-<img src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/ipython-notebook.png" style="height:550px" />
+<img src="https://github.com/rmorshea/talks/raw/idom-its-react-but-in-python/static/ipython-notebook.png" style="height:550px" />
 
 <!--
 
@@ -64,6 +66,7 @@ came about around
 The browser was becoming the OS of the internet.
 
 Python, being a backend language had to adapt.
+to the changing landscape
 
 To my mind
 
@@ -82,7 +85,7 @@ part of the reason for that is...
 
 # IPyWidgets
 
-<img src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/ipywidgets-interaction.gif" />
+<img src="https://github.com/rmorshea/talks/raw/idom-its-react-but-in-python/static/ipywidgets-interaction.gif" />
 
 <!--
 
@@ -95,20 +98,36 @@ leveraged IPython Notebook APIs
 to give Python bidirectional comms with Browser
 
 thus, brought interactivity to Python
+more than just a REPL
 
 see example
 
-This helped to spur Python's popularity amongst scientists
+ipywidgets
+important part
+of spuring Python's popularity
+amongst scientists
 
 allowed for creation of
 interactive
 computing tools
 for non-engineers
 
-scientists no longer had to make User Interfaces themselves
-in order to make their work more approachable
+scientists no longer had to make User Interfaces
+for themselves or others
+in order to make their work
+more approachable
+easier to analyze
 
-shifting gears...
+since creation IPyWidgets
+has become a UI framework
+in its own right
+as people have developed
+more and more
+widgets
+for ecosystem
+
+shifting gears
+to JS UI frameworks
 
 -->
 
@@ -136,7 +155,7 @@ getting back to it
 
 # A Paradigm Shift
 
-<img src="https://github.com/rmorshea/talks/raw/master/idom/what-is-idom/static/js-shift-to-declarative.png" />
+<img src="https://github.com/rmorshea/talks/raw/idom-its-react-but-in-python/static/js-shift-to-declarative.png" />
 
 <!--
 
@@ -236,22 +255,29 @@ but many times we don't want that burden
 bugs
 extra work
 
----
-
-before moving on
-
-important to state
-there's a lot more to this topic
-
-but for the purposes of this talk that's all you need to know
-
 -->
 
 
 # Wisdom of the Croud
 
+<img src="https://github.com/rmorshea/talks/raw/idom-its-react-but-in-python/static/js-shift-to-declarative.png" />
 
-# <div style="display:flex;justify-content:center;"><div>What About Python UI Frameworks?</div></div>
+<!--
+
+Now you can take me at my word here
+
+or you can trust wisdom of the croud
+
+the popularity of React is quite decisive
+
+ -->
+
+
+#
+<div>
+  <h1>What About UI Frameworks</h1>
+  <h1 style="display:flex;justify-content:center;">for Python?</h1>
+</div>
 
 <!--
 
@@ -260,9 +286,6 @@ Have they learned the same lesson?
 
 Declarative programs tends to be
 easier to do correctly
-
-
-It's been a while since IPyWidgets
 
 unfortunately, no
 not really
@@ -275,19 +298,18 @@ imperative design patterns
 there's been some movement in a possitive direction
 Streamlit has done best
 but doesn't fully embrace it
+particularly with state
 
 -->
 
----
-
 <div style="width:100%">
   <div style="display:flex;justify-content:center;">
-    <img style="width:35%;margin:7%" src="https://static.bokeh.org/branding/logos/bokeh-logo.svg" />
-    <img style="width:35%;margin:7%" src="https://panel.holoviz.org/_static/logo_stacked.png" />
+    <img style="width:30%;margin:7%" src="https://static.bokeh.org/branding/logos/bokeh-logo.svg" />
+    <img style="width:30%;margin:7%" src="https://panel.holoviz.org/_static/logo_stacked.png" />
   </div>
   <div style="display:flex;justify-content:center;">
-    <img style="width:35%;margin:7%" src="https://avatars.githubusercontent.com/u/5997976?s=200&v=4" />
-    <img style="width:35%;margin:7%" src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.svg" />
+    <img style="width:30%;margin:7%" src="https://avatars.githubusercontent.com/u/5997976?s=200&v=4" />
+    <img style="width:30%;margin:7%" src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.svg" />
   </div>
 </div>
 
@@ -317,7 +339,7 @@ and having near parity
 with features of a JS Framework
 is pretty unheard of
 
-to demonstrate
+to demonstrate the similarities
 look at example
 
 -->
@@ -396,31 +418,15 @@ writing apps with React in JS
  -->
 
 
-#
-
-<div style="height:45vh" />
-
-<div>
-<h1>What Can IDOM Do?</h1>
-</div>
-
-<div style="height:50vh" />
+# How Does It Work?
 
 <!--
 
-SCROLL DOWN!
+How does IDOM manage this
 
-But it also doesn't give up the things that are great about Python
-MATPLOTLIB!
+And why haven't other frameworks already done this
 
- -->
-
-<span data-idom="views.gallery" />
-
-<div style="height:25vh" />
-
-
-# How Does It Work?
+-->
 
 
 #
@@ -528,6 +534,31 @@ html.div(
 
 > **Isn’t wiring a virtual representation of the view to the client,
 > even if its diffed, expensive?**
+
+
+
+#
+
+<div style="height:45vh" />
+
+<div>
+<h1>What Can IDOM Do?</h1>
+</div>
+
+<div style="height:50vh" />
+
+<!--
+
+SCROLL DOWN!
+
+But it also doesn't give up the things that are great about Python
+MATPLOTLIB!
+
+ -->
+
+<span data-idom="views.gallery" />
+
+<div style="height:25vh" />
 
 
 # Javascript Integration
