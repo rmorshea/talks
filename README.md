@@ -1,6 +1,6 @@
 <span data-idom="views.header"/>
 
-# <div style="display:flex;justify-content:center;"><a href="https://github.com/idom-team/idom" target="_blank">IDOM</a></div>
+# <div style="display:flex;justify-content:center;">IDOM</div>
 
 ---
 
@@ -22,6 +22,7 @@ full disclosure I'm also creator of IDOM
 
 -->
 
+
 # The Plan
 
 - A bit of history
@@ -31,16 +32,11 @@ full disclosure I'm also creator of IDOM
 - Live demo
 
 
-#
-
-<div>
-  <h1>A Brief History</h1>
-  <h1>of UI Frameworks</h1>
-</div>
+# UI Frameworks
 
 ---
 
-### ...as it relates to Python
+### A history as it relates to Python
 
 <!--
 
@@ -59,6 +55,9 @@ aims to be
 <!--
 
 Start with IPython Notebook
+
+a browser-based interactive computing
+environment for Python
 
 came about around
 ~2010-2012
@@ -141,7 +140,7 @@ This is where the "React"
 from the title
 comes into the picture
 
-How many of you guys have heard of React?
+How many have heard of React?
 
 if you're unfamiliar don't wory.
 part of the point
@@ -229,6 +228,7 @@ In short, you as the developer have very fine grained control
 
 -->
 
+
 # Declarative
 
 - Only responsible for app states
@@ -258,7 +258,7 @@ extra work
 -->
 
 
-# Wisdom of the Croud
+# Wisdom of the Crowd
 
 <img src="https://github.com/rmorshea/talks/raw/idom-its-react-but-in-python/static/js-shift-to-declarative.png" />
 
@@ -266,7 +266,7 @@ extra work
 
 Now you can take me at my word here
 
-or you can trust wisdom of the croud
+or you can trust wisdom of the crowd
 
 the popularity of React is quite decisive
 
@@ -399,8 +399,6 @@ def ClickCounter():
 idom.run(Counter)
 ```
 
-# Transferable Knowledge
-
 <!--
 
 A cool side effect
@@ -427,6 +425,20 @@ How does IDOM manage this
 And why haven't other frameworks already done this
 
 -->
+
+
+# Model Synchronization
+
+<div style="display:flex;justify-content:center;">
+  <span data-idom="views.img" data-file="mvc-flow-diagram.svg" />
+</div>
+
+
+# View Synchronization
+
+<div style="display:flex;justify-content:center;">
+  <span data-idom="views.img" data-file="idom-flow-diagram.svg" />
+</div>
 
 
 #
@@ -515,19 +527,6 @@ html.div(
   )
 )
 ```
-
-# MVC Architecture
-
-<div style="display:flex;justify-content:center;">
-  <span data-idom="views.img" data-file="mvc-flow-diagram.svg" />
-</div>
-
-
-# IDOM's Architecture
-
-<div style="display:flex;justify-content:center;">
-  <span data-idom="views.img" data-file="idom-flow-diagram.svg" />
-</div>
 
 
 #
