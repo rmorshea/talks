@@ -10,12 +10,14 @@
 
 talking about IDOM
 
-new UI Framework for Python
-best compared to
+new Framework for building
+full-stack, interactive, web applications
+in pure Python
 
 Plotly Dash
 Streamlit
 IPyWidgets
+PyWebIO
 others...
 
 full disclosure I'm also creator of IDOM
@@ -23,13 +25,43 @@ full disclosure I'm also creator of IDOM
 -->
 
 
-# The Plan
+# Web App vs Website
 
-- A bit of history
-- Where IDOM fits in
-- What you can do with IDOM
-- How IDOM works
-- Live demo
+<img src="https://github.com/rmorshea/talks/raw/idom-its-react-but-in-python/static/site-vs-app.svg" style="height:550px" />
+
+
+# Diversity of Languages
+
+<table style="width:100%">
+<thead>
+  <tr style="font-size:3.5vmin">
+    <th>Server</th>
+    <th>Browser</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Python</td>
+    <td>Javascript</td>
+  </tr>
+  <tr>
+    <td>Go</td>
+    <td>React</td>
+  </tr>
+  <tr>
+    <td>C++</td>
+    <td>Vue</td>
+  </tr>
+  <tr>
+    <td>Rust</td>
+    <td>Svelte</td>
+  </tr>
+  <tr>
+    <td>...</td>
+    <td>...</td>
+  </tr>
+</tbody>
+</table>
 
 
 # UI Frameworks
