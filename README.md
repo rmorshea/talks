@@ -14,6 +14,8 @@ new Framework for building
 full-stack, interactive, web applications
 in pure Python
 
+best compared to...
+
 Plotly Dash
 Streamlit
 IPyWidgets
@@ -25,23 +27,43 @@ full disclosure I'm also creator of IDOM
 -->
 
 
-# Web App vs Website
+# A Bit of History
+
+<!--
+
+before dive into things
+bit of history
+give some insite into why
+created IDOM
+
+gonna start by...
+
+ -->
+
+# Web Apps vs Websites
 
 <img src="https://github.com/rmorshea/talks/raw/idom-its-react-but-in-python/static/site-vs-app.png" style="height:550px" />
 
+<!--
 
-# Diversity of Languages
+general distinction
+sites faciliate content consumption
+apps facilitate interation with content
+
+ -->
+
+# Frontend vs Backend Tech
 
 <table style="width:100%">
 <thead>
   <tr style="font-size:3.5vmin">
-    <th>Server</th>
-    <th>Browser</th>
+    <th>Backend</th>
+    <th>Frontend</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>Python</td>
+    <td>Python 🐍</td>
     <td>Javascript</td>
   </tr>
   <tr>
@@ -62,22 +84,6 @@ full disclosure I'm also creator of IDOM
   </tr>
 </tbody>
 </table>
-
-
-# UI Frameworks
-
----
-
-### A history as it relates to Python
-
-<!--
-
-A history of what?
-
-since that's what
-aims to be
-
- -->
 
 
 # IPython Notebook
@@ -152,15 +158,37 @@ easier to analyze
 since creation IPyWidgets
 has become a UI framework
 in its own right
-as people have developed
-more and more
-widgets
-for ecosystem
+through tool Viola
+strips away notebook interface
+only show cell outputs
 
 shifting gears
 to JS UI frameworks
 
 -->
+
+
+#
+
+<div>
+  <h1>Spoiled for Choice</h1>
+  <h1 style="display:flex;justify-content:center;">for Python?</h1>
+</div>
+
+<!--
+
+-->
+
+<div style="width:100%">
+  <div style="display:flex;justify-content:center;">
+    <img style="width:30%;margin:7%" src="https://static.bokeh.org/branding/logos/bokeh-logo.svg" />
+    <img style="width:30%;margin:7%" src="https://panel.holoviz.org/_static/logo_stacked.png" />
+  </div>
+  <div style="display:flex;justify-content:center;">
+    <img style="width:30%;margin:7%" src="https://avatars.githubusercontent.com/u/5997976?s=200&v=4" />
+    <img style="width:30%;margin:7%" src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.svg" />
+  </div>
+</div>
 
 
 # Javascript UI Frameworks
@@ -307,7 +335,7 @@ the popularity of React is quite decisive
 
 #
 <div>
-  <h1>What About UI Frameworks</h1>
+  <h1>What About in Python?</h1>
   <h1 style="display:flex;justify-content:center;">for Python?</h1>
 </div>
 
