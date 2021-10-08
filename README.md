@@ -27,7 +27,7 @@ full disclosure I'm also creator of IDOM
 
 # Web App vs Website
 
-<img src="https://github.com/rmorshea/talks/raw/idom-its-react-but-in-python/static/site-vs-app.svg" style="height:550px" />
+<img src="https://github.com/rmorshea/talks/raw/idom-its-react-but-in-python/static/site-vs-app.png" style="height:550px" />
 
 
 # Diversity of Languages
