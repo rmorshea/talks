@@ -38,130 +38,6 @@ gonna start by...
 
  -->
 
-# Web Apps vs Websites
-
-<img src="https://github.com/rmorshea/talks/raw/idom-its-react-but-in-python/static/site-vs-app.png" style="height:550px" />
-
-<!--
-
-general distinction
-sites faciliate content consumption
-apps facilitate interation with content
-
-back in the day
-if you visited a site
-with browser
-internet explorer
-
-there's server, browser, you
-server sends static HTML
-browser renders it
-into someone's blog where they post
-their weird startrek fan-fiction
-you have some laugh
-
-today
-pretty much everything is an app
-by definition I'm using here
-users expect a lot more
-from places they visit
-
-now the way things work
-on initial request
-server still sends static
-but after
-usually via REST or websockets
-it can send more data
-usually
-in response to events triggered
-by users
-
-for ex moving slider that filters data in plot
-
- -->
-
-# Frontend vs Backend Tech
-
-<!--
-
-how do we build these apps
-tech is divided into two types
-backend runs on serve on developers hardwared
-frontend runs on users hardware in their browser
-
-the fact that frontend tech runs in the browser
-important
-
-what you can use in browser is
-limited by what it supports
-
-up until recently
-(not going to get into WASM)
-the only language major browsers support
-is javascript
-
-back in the days of sites
-you could get away with using
-any language that could render
-HTML template
-
-because you didn't have to worry
-about running anything client-side
-that would facilitate interactions
-
-so unforutnately,
-if you want to build an interactive web app
-you need to know some backend
-and javascript in one form or another
-
-the only reason there's diversity there is because
-very clever people figured out devlish was to transpile
-new languages into javascript
-while diversity is nice
-the added complixity of build systems etc
-is a nightmare
-
-but people thought...
-what if we could have our cake and eat it too?
-
-those thoughts,
-at least in Python world
-culminated with
-IPython notebook
-
- -->
-
-<table style="width:100%">
-<thead>
-  <tr style="font-size:3.5vmin">
-    <th>Backend</th>
-    <th>Frontend</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Python 🐍</td>
-    <td>Javascript</td>
-  </tr>
-  <tr>
-    <td>Go</td>
-    <td>React</td>
-  </tr>
-  <tr>
-    <td>NodeJS</td>
-    <td>Vue</td>
-  </tr>
-  <tr>
-    <td>Rust</td>
-    <td>Svelte</td>
-  </tr>
-  <tr>
-    <td>...</td>
-    <td>...</td>
-  </tr>
-</tbody>
-</table>
-
 
 # IPython Notebook
 
@@ -634,3 +510,8 @@ Last thing want to touch on
 
 
  -->
+
+
+#
+
+<img src="https://raw.githubusercontent.com/idom-team/idom/main/branding/svg/idom-logo.svg" />
