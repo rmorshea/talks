@@ -8,7 +8,8 @@
 
 <!--
 
-talking about IDOM
+IDOM
+of which I'm the creator
 
 new Framework for building
 full-stack, interactive, web applications
@@ -18,11 +19,8 @@ best compared to...
 
 Plotly Dash
 Streamlit
-IPyWidgets
 PyWebIO
 others...
-
-full disclosure I'm also creator of IDOM
 
 -->
 
@@ -50,9 +48,88 @@ general distinction
 sites faciliate content consumption
 apps facilitate interation with content
 
+back in the day
+if you visited a site
+with browser
+internet explorer
+
+there's server, browser, you
+server sends static HTML
+browser renders it
+into someone's blog where they post
+their weird startrek fan-fiction
+you have some laugh
+
+today
+pretty much everything is an app
+by definition I'm using here
+users expect a lot more
+from places they visit
+
+now the way things work
+on initial request
+server still sends static
+but after
+usually via REST or websockets
+it can send more data
+usually
+in response to events triggered
+by users
+
+for ex moving slider that filters data in plot
+
  -->
 
 # Frontend vs Backend Tech
+
+<!--
+
+how do we build these apps
+tech is divided into two types
+backend runs on serve on developers hardwared
+frontend runs on users hardware in their browser
+
+the fact that frontend tech runs in the browser
+important
+
+what you can use in browser is
+limited by what it supports
+
+up until recently
+(not going to get into WASM)
+the only language major browsers support
+is javascript
+
+back in the days of sites
+you could get away with using
+any language that could render
+HTML template
+
+because you didn't have to worry
+about running anything client-side
+that would facilitate interactions
+
+so unforutnately,
+if you want to build an interactive web app
+you need to know some backend
+and javascript in one form or another
+
+the only reason there's diversity there is because
+very clever people figured out devlish was to transpile
+new languages into javascript
+while diversity is nice
+the added complixity of build systems etc
+is a nightmare
+
+but people thought...
+what if we could have our cake and eat it too?
+
+those thoughts,
+at least in Python world
+culminated with
+IPython notebook
+
+ -->
 
 <table style="width:100%">
 <thead>
@@ -71,7 +148,7 @@ apps facilitate interation with content
     <td>React</td>
   </tr>
   <tr>
-    <td>C++</td>
+    <td>NodeJS</td>
     <td>Vue</td>
   </tr>
   <tr>
@@ -92,30 +169,19 @@ apps facilitate interation with content
 
 <!--
 
-Start with IPython Notebook
-
 a browser-based interactive computing
 environment for Python
 
-came about around
+came to popularity
 ~2010-2012
 
-The browser was becoming the OS of the internet.
-
-Python, being a backend language had to adapt.
-to the changing landscape
-
-To my mind
-
-IPython Notebook was a leader in that area
-
-and remains so today
+and remains popular so today
 
 in the form of
 Jupyter Lab
 and the "Jovian" ecosystem
 
-part of the reason for that is...
+part of the reason its still popular...
 
 -->
 
@@ -149,35 +215,59 @@ interactive
 computing tools
 for non-engineers
 
-scientists no longer had to make User Interfaces
+scientists no longer had to
+learn Javascript
+to make User Interfaces
 for themselves or others
 in order to make their work
 more approachable
 easier to analyze
 
-since creation IPyWidgets
+since creation
+IPyWidgets
 has become a UI framework
 in its own right
 through tool Viola
 strips away notebook interface
 only show cell outputs
 
-shifting gears
-to JS UI frameworks
-
 -->
 
 
 #
 
-<div>
-  <h1>Spoiled for Choice</h1>
-  <h1 style="display:flex;justify-content:center;">for Python?</h1>
-</div>
-
 <!--
 
--->
+since then
+spoiled for choice
+in space of
+python-based user interface frameworks
+
+bokeh
+panel
+streamlit
+dash
+
+others...
+
+before we get too excited
+about this progress
+
+take a step
+focus on what these frameworks can do better
+because many suffer
+from similar set of problems
+
+want to do that
+by looking at...
+
+ -->
+
+<div style="display:flex;justify-content:center;">
+  <h1>Spoiled for Choice</h1>
+</div>
+
+---
 
 <div style="width:100%">
   <div style="display:flex;justify-content:center;">
@@ -196,18 +286,26 @@ to JS UI frameworks
 
 <!--
 
+js frameworks over same time period...
+
 This is where the "React"
 from the title
 comes into the picture
 
-How many have heard of React?
+get a sense for familiarity...
+Have heard of React?
+Have used React?
+Use it daily/weekly?
 
 if you're unfamiliar don't wory.
 part of the point
 I don't want you need to know about
 Javascript or React
 
-getting back to it
+just want to explain what it gets right
+about UI frameworks in general
+
+and how that informed development of IDOM
 
 -->
 
@@ -218,7 +316,6 @@ getting back to it
 
 <!--
 
-a little later
 2015-2017
 
 paradigm shift
@@ -318,30 +415,15 @@ extra work
 -->
 
 
-# Wisdom of the Crowd
-
-<img src="https://github.com/rmorshea/talks/raw/idom-its-react-but-in-python/static/js-shift-to-declarative.png" />
-
-<!--
-
-Now you can take me at my word here
-
-or you can trust wisdom of the crowd
-
-the popularity of React is quite decisive
-
- -->
-
-
 #
-<div>
+<div style="display:flex;justify-content:center;">
   <h1>What About in Python?</h1>
-  <h1 style="display:flex;justify-content:center;">for Python?</h1>
 </div>
 
 <!--
 
-What About Python UI Frameworks?
+So going back to Python UI frameworks
+
 Have they learned the same lesson?
 
 Declarative programs tends to be
@@ -350,15 +432,10 @@ easier to do correctly
 unfortunately, no
 not really
 
-almost all
+all
 one form or another
 fall prey problems of
 imperative design patterns
-
-there's been some movement in a possitive direction
-Streamlit has done best
-but doesn't fully embrace it
-particularly with state
 
 -->
 
@@ -374,8 +451,6 @@ particularly with state
 </div>
 
 #
-
-<img src="https://raw.githubusercontent.com/idom-team/idom/main/branding/svg/idom-logo.svg" />
 
 <!--
 
@@ -399,19 +474,45 @@ and having near parity
 with features of a JS Framework
 is pretty unheard of
 
-to demonstrate the similarities
-look at example
+why should we care?
+well as example
+
+
+SCROLL DOWN!
+
+all following were implemented in pure python
+without writing any custom JS
+
+what JS is used works "out of the box"
+without any extra install/build steps
+will talk a bit about that later
+
+victory charting library
+pigeon mapping tool
+basic HTML
+from scrath
+
+...and as may have been guessing
+even these slides were made with IDOM
+
+
+But it also doesn't give up the things that are great about Python
+MATPLOTLIB!
 
 -->
 
+<div style="height:27vh" />
+<img src="https://raw.githubusercontent.com/idom-team/idom/main/branding/svg/idom-logo.svg" />
+<div style="height:50vh" />
 
-# Simple Click Counter
+<span data-idom="views.gallery" />
 
----
+<div style="height:25vh" />
 
-<div style="display:flex;justify-content:center;margin-top:50px;">
-  <span data-idom="views.click_count" />
-</div>
+
+#
+
+<span data-idom="views.editor" />
 
 
 # With React
@@ -443,39 +544,6 @@ ReactDOM.render(
 ```
 
 
-# With IDOM
-
-```python
-import idom
-
-@idom.component
-def ClickCounter():
-    count, set_count = idom.hooks.use_state(0)
-    return idom.html.button(
-        {"onClick": lambda _: set_count(count + 1)},
-        f"clicked {count} times"
-    )
-
-idom.run(Counter)
-```
-
-<!--
-
-A cool side effect
-of similarity
-
-When you learn how to write a app with IDOM
-
-while not exactly the same
-
-If you choose to learn Javascript
-much of what you learned with IDOM
-can be directly applied
-writing apps with React in JS
-
- -->
-
-
 # How Does It Work?
 
 <!--
@@ -484,10 +552,37 @@ How does IDOM manage this
 
 And why haven't other frameworks already done this
 
+comes down to their general architectures
+
 -->
 
 
 # Model Synchronization
+
+<!--
+
+IDOM's peers go a route of
+
+synchronizing a model,
+which represents underlying state of app,
+between server client
+where client translates that model into a view
+that is displayed to user
+
+when user interacts with view
+client sends event back to server
+server updates the model
+and the model gets resynced
+
+the problem here
+if our goal is to empower Python users
+is that responsibilities are divided
+between server/client
+
+server responsible for updating model
+the client responsible for translating model into view
+
+-->
 
 <div style="display:flex;justify-content:center;">
   <span data-idom="views.img" data-file="mvc-flow-diagram.svg" />
@@ -496,159 +591,46 @@ And why haven't other frameworks already done this
 
 # View Synchronization
 
+<!--
+
+IDOM takes different approach
+synchronizes representation of view
+known as VDOM
+(won't get into, could be whole other talk)
+between server and client
+
+as a result,
+the server, and thus the Python developer
+gains control over translating the model into the view
+
+the specific implementation here shows that
+things known as "components"
+reusuable functions for contructing a part of the view
+are composed together to create the whole view
+
+for ex, click counter from before was a "component"
+
+something called
+a "layout" takes that representation of the view,
+checks what's changed
+sends the difference to the client
+client then uses that diff to synchronize its
+representation of the view
+
+the user can the interact
+the components re-render and thus the cycle starts again
+ -->
+
 <div style="display:flex;justify-content:center;">
   <span data-idom="views.img" data-file="idom-flow-diagram.svg" />
 </div>
 
 
-#
+# Ecosystem Independence
 
 <!--
 
-virtual document object model
+Last thing want to touch on
 
-a.k.a. Virtual DOM
-
-what is the DOM?
-
-standardized data structure
-which "models"
-a "document"
-as a series of nodes or "objects"
-arranged in form of a tree
-
-see image
-
--->
-
-<div style="display:flex;justify-content:center">
-  <h1 style="font-size:3vw;width:40%;margin-right:50px;border-right:solid 7px grey;">
-    Virtual Document Object Model
-  </h1>
-  <img
-    style="width:50%"
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1280px-DOM-model.svg.png"
-  />
-</div>
-
-
-# Some HTML
-
-```html
-<div>
-  Put your name here:
-  <input
-    type="text"
-    minlength="4"
-    maxlength="8"
-    onchange="a_python_callback(event)"
-  />
-</div>
-```
-
-# Turned Into VDOM
-
-```python
-{
-  "tagName": "div",
-  "children": [
-    "Put your name here:",
-    {
-      "tagName": "input",
-      "attributes": {
-        "type": "text",
-        "minLength": 4,
-        "maxLength": 8
-      },
-      "eventHandlers": {
-        "onChange": {
-          "target": "unique-id-of-a_python_callback",
-          "preventDefault": False,
-          "stopPropagation": False
-        }
-      }
-    }
-  ],
-}
-```
-
-# Create VDOM With IDOM
-
-```python
-html.div(
-  "Put your name here:",
-  html.input(
-    {
-        "type": "text",
-        "minLength": 4,
-        "maxLength": 8,
-        "onChange": lambda event: ...
-    }
-  )
-)
-```
-
-
-#
-
-> **Isn’t wiring a virtual representation of the view to the client,
-> even if its diffed, expensive?**
-
-
-
-#
-
-<div style="height:45vh" />
-
-<div>
-<h1>What Can IDOM Do?</h1>
-</div>
-
-<div style="height:50vh" />
-
-<!--
-
-SCROLL DOWN!
-
-But it also doesn't give up the things that are great about Python
-MATPLOTLIB!
 
  -->
-
-<span data-idom="views.gallery" />
-
-<div style="height:25vh" />
-
-
-# Javascript Integration
-
-```python
-import idom
-
-victory = idom.web.module_from_template(
-  "react", "victory-bar", fallback="⌛"
-)
-VictoryBar = idom.web.export(victory, "VictoryBar")
-
-@idom.component
-def MyBarChart():
-    bar_style = {
-        "parent": {"width": "500px"},
-        "data": {"fill": "royalblue"},
-    }
-    return VictoryBar({"style": bar_style})
-```
-
-<div style="display:flex;justify-content:center;">
-  <span data-idom="views.victory_chart" />
-</div>
-
-
-<!--
-
-
-
--->
-
-
-# Demo

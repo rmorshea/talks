@@ -50,3 +50,15 @@ for demo
 - ask for people following along
 - most people in-person will not
 - use as opportunity to mention "ecosystem independence"
+
+good are artists copy great artists steel
+frontend frameowrk on the backend
+
+dog vdom analogy?
+
+
+show magic of hooks, but don't explain
+explain, but don't tell everything about hook feature.
+
+in demo
+live code a JS 

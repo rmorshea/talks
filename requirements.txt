@@ -3,7 +3,7 @@ black
 matplotlib
 jsx-lexer
 
-idom
+idom==0.33.3
 idom-jupyter
 jupyterlab
 retrolab

@@ -15,11 +15,11 @@ def main():
     return idom.html.div(
         RandomWalk(),
         line_break(),
+        MapWithMarkers(),
+        line_break(),
         PlayDinosaurSound(),
         line_break(),
         GameView(),
-        line_break(),
-        MapWithMarkers(),
         line_break(),
         PolynomialPlot(),
     )
