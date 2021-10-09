@@ -26,11 +26,19 @@ def main():
                 result = idom.html.pre("nothing to run")
             else:
                 try:
-                    result = output.current()
+                    component = output.current()
                 except Exception as e:
                     result = e
-                if not isinstance(result, idom.Component):
-                    result = idom.html.pre(f"Expected component, not {result}")
+                if not isinstance(component, idom.Component):
+                    result = idom.html.pre(f"Expected component, not {component}")
+                else:
+                    try:
+                        result = component.render()
+                    except Exception as err:
+                        result = idom.html.pre(
+                            {"style": {"width": "800px", "overflow": "scroll"}},
+                            str(err),
+                        )
         finally:
             idom.run = old_run
     else:
@@ -48,6 +56,6 @@ def main():
         ),
         idom.html.style(".cm-editor { font-size: 0.85em; }"),
         Editor({"onChange": set_content}),
-        idom.html.br(),
+        idom.html.hr(),
         result,
     )

@@ -18,8 +18,9 @@ export function Editor({ onChange }) {
     CodeMirror,
     {
       placeholder: "...",
-      theme: "dark",
+      theme: "light",
       minWidth: "900px",
+      style: {"border": "1px solid #cccccc"},
       onChange: (value) => onChange(value),
     }
   );
