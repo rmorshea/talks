@@ -19,7 +19,7 @@ def main():
         line_break(),
         PlayDinosaurSound(),
         line_break(),
-        GameView(),
-        line_break(),
         PolynomialPlot(),
+        line_break(),
+        GameView(),
     )

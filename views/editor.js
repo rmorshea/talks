@@ -1,8 +1,6 @@
 import * as React from "https://esm.sh/react";
 import * as ReactDOM from "https://esm.sh/react-dom";
-import CodeMirror from 'https://esm.sh/@uiw/react-codemirror@4.0.1';
-import { StreamLanguage } from 'https://esm.sh/@codemirror/stream-parser';
-import { python } from 'https://esm.sh/@codemirror/lang-python';
+import CodeMirror from 'https://esm.sh/@uiw/react-codemirror';
 
 export function bind(node, config) {
   return {

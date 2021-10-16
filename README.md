@@ -515,3 +515,8 @@ Last thing want to touch on
 #
 
 <img src="https://raw.githubusercontent.com/idom-team/idom/main/branding/svg/idom-logo.svg" />
+
+#
+
+<h3><i class="fab fa-github" /> github.com/idom-team/idom</h3>
+<h3><i class="fab fa-twitter" /> twitter.com/rmorshea</h3>
